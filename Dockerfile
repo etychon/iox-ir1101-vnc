@@ -6,7 +6,7 @@ COPY --from=qemu /usr/bin/qemu-aarch64-static /usr/bin
 FROM alpine:latest
 MAINTAINER Emmanuel Tychon
 
-RUN apk --no-cache add x11vnc ttf-liberation ttf-dejavu terminus-font xvfb openbox xfce4-terminal supervisor sudo \
+RUN apk --no-cache add x11vnc ttf-liberation ttf-dejavu firefox-esr terminus-font xvfb openbox xfce4-terminal supervisor sudo \
 && addgroup alpine \
 && adduser  -G alpine -s /bin/sh -D alpine \
 && echo "alpine:alpine" | /usr/sbin/chpasswd \

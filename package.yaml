@@ -9,7 +9,7 @@ app:
     PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
   resources:
     cpu: "400"
-    memory: "128"
+    memory: "512"
     network:
     - interface-name: eth0
       ports:

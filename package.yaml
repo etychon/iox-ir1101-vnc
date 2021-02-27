@@ -1,0 +1,27 @@
+descriptor-schema-version: "2.7"
+info:
+  name: iox-ir1101-vnc
+  version: latest
+  author-name: Emmanuel Tychon
+app:
+  cpuarch: aarch64
+  env:
+    PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+  resources:
+    cpu: "400"
+    memory: "128"
+    network:
+    - interface-name: eth0
+      ports:
+        tcp:
+        - "5900"
+    profile: custom
+  startup:
+    rootfs: rootfs.tar
+    target:
+    - /usr/bin/supervisord
+    - -c
+    - /etc/supervisord.conf
+    user: alpine
+    workdir: /home/alpine
+  type: docker

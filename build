@@ -1,0 +1,2 @@
+docker build -t iox-ir1101-vnc .
+ioxclient docker package iox-ir1101-vnc . -n iox-ir1101-vnc-`date +"%Y%m%d-%H%M%S"`
